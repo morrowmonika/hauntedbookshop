@@ -1,0 +1,139 @@
+:root {
+  --green: #b0ebc2;
+  --white: #ffffff;
+}
+
+@font-face {
+  font-family: Lovelo;
+  src: url("https://haunted-mansion.s3.eu-west-2.amazonaws.com/fonts/Lovelo-Black.woff") format("woff");
+}
+@font-face {
+  font-family: Garet;
+  src: url("https://haunted-mansion.s3.eu-west-2.amazonaws.com/fonts/Garet-Book.ttf") format("truetype");
+}
+@keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+@-moz-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+.background-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+}
+
+.clouds {
+  opacity: 0.7;
+  width: 10000px;
+  height: 100%;
+  background: transparent url("https://haunted-mansion.s3.eu-west-2.amazonaws.com/images/clouds_repeat.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  -moz-animation: move-background 150s linear infinite;
+  -ms-animation: move-background 150s linear infinite;
+  -o-animation: move-background 150s linear infinite;
+  -webkit-animation: move-background 150s linear infinite;
+  animation: move-background 150s linear infinite;
+}
+
+.background {
+  min-height: 100vh;
+  min-width: 100vw;
+  position: absolute;
+  z-index: -1;
+}
+
+.text-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.logo-container {
+  font-family: "Garet";
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-height: 100vh;
+  height: 500px;
+}
+
+h1 {
+  font-family: "Lovelo";
+}
+
+.white-neon {
+  text-shadow: 0 0 10px var(--white), 0 0 21px var(--white), 0 0 82px var(--white);
+}
+
+.green-neon {
+  color: var(--green);
+  text-shadow: 0 0 7px var(--green), 0 0 10px var(--green), 0 0 21px var(--green), 0 0 42px var(--green), 0 0 82px var(--green), 0 0 92px var(--green), 0 0 102px var(--green), 0 0 151px var(--green);
+}
+
+.logo {
+  height: 60%;
+  -moz-animation: float 15s ease infinite;
+  -ms-animation: float 15s ease infinite;
+  -o-animation: float 15s ease infinite;
+  -webkit-animation: float 15s ease infinite;
+  animation: float 15s ease infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+    rotate: 0deg;
+  }
+  25% {
+    rotate: -10deg;
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  75% {
+    rotate: 10deg;
+  }
+  100% {
+    transform: translatey(0px);
+    rotate: 0deg;
+  }
+}
